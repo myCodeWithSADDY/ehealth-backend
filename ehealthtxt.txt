@@ -1,0 +1,82 @@
+EHealth-Care
+. Front-end devoloped using react
+
+. Back-end should be devoloped by using Node.JS, MangoDB,
+. The Front-end repo code is here https://github.com/parmarraj999/ehealth-care
+
+### Backend Setup:
+
+1. **Node.js and npm:**
+    - **Download:** Visit the official Node.js website and download the LTS (Long-Term Support) version for your operating system.
+    - **Install:** Follow the installer's instructions.
+    - **npm (Node Package Manager):** Comes bundled with Node.js. Use it to manage dependencies.
+2. **Express.js:**
+    - **Installation:** Open your terminal and run:
+        
+        Bash
+        
+        `npm install express`
+        
+        Use code [with caution.](https://www.notion.so/faq#coding)
+        
+3. **MongoDB:**
+    - **Cloud Database:** Consider using a free tier of a cloud database provider like MongoDB Atlas. This allows you to manage your database without setting up a local server.
+    - **Local Setup:** If you prefer local setup, you can install MongoDB Community Server. However, be aware of potential maintenance and security considerations.
+
+### Backend Development:
+
+1. **Project Structure:**
+    - Create a basic project structure:
+        
+        `your-project/
+        ├── server.js
+        ├── routes/
+        │   ├── api.js
+        │   ├── admin.js
+        │   └── user.js
+        ├── models/
+        │   ├── hospital.js
+        │   ├── doctor.js
+        │   └── user.js
+        ├── config/
+        │   └── database.js`
+        
+2. **Database Models:**
+    - Define schemas for hospitals, doctors, users, and appointments using Mongoose:
+        
+        JavaScript
+        
+        `// models/hospital.js
+        const mongoose = require('mongoose');
+        
+        const hospitalSchema = new mongoose.Schema({
+            name: String,
+            address: String,
+            // ... other fields
+        });
+        
+        module.exports = mongoose.model('Hospital', hospitalSchema);`
+        
+        Use code [with caution.](https://www.notion.so/faq#coding)
+        
+3. **API Routes:**  
+    - **User Routes:**
+        - User registration and login
+        - Book appointments
+        - Search for doctors
+        - Send medicine requests
+    - **Admin Routes:**
+        - Add and manage hospitals and doctors
+        - View and respond to medicine requests
+4. **Backend Logic:**
+    - Implement server-side logic for:
+        - User authentication and authorization
+        - Database operations (CRUD)
+        - Email or SMS notifications for appointments and medicine requests
+
+### Deployment:
+
+1. **Heroku:** A popular platform-as-a-service (PaaS) provider. It offers a free tier for small applications.
+2. **Vercel:** Another great option for deploying Node.js applications. It also has a free tier.
+
+###
